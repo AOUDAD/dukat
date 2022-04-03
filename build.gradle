@@ -24,7 +24,7 @@ allprojects {
 
       project.sourceSets {
         main.kotlin.srcDirs = ['src']
-        
+
         test.kotlin.srcDirs = ['test/src']
         test.resources.srcDirs = ['test/data']
       }
@@ -56,4 +56,11 @@ allprojects {
     }
   }
 
+}
+
+task exportNodeVersion {
+  doLast {
+    def jitpackDir = new File(projectDir, ".jitpack")
+    new File(jitpackDir, "node_version.txt").text = gradle.nodeVersion
+  }
 }

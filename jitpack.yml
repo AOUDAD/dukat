@@ -1,0 +1,4 @@
+# Reference: https://jitpack.io/docs/BUILDING/#custom-commands
+
+before_install:
+  - . .jitpack/node_setup.sh # Execute in same process
